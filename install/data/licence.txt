@@ -1,0 +1,41 @@
+Project Ncaster Version 1.7 
+
+End User License Agreement (EULA) 
+
+CAREFULLY READ THIS LICENSE BEFORE USING THIS PRODUCT. 
+USING THIS PRODUCT INDICATES YOUR ACKNOWLEDGMENT THAT YOU HAVE READ THIS LICENSE AND AGREE TO ITS TERMS.
+IF YOU DO NOT AGREE, SELECT NO BELOW AND DO NOT INSTALL THIS SOFTWARE. 
+
+This software is Copyright by Nathan O'shea founder of Ndream and programer of ncaster. 
+
+LICENSE RIGHTS:
+Licensee shall have the right, subject to the terms and conditions of this agreement, to use one copy of the product on a single computer/workstation.
+
+OWNERSHIP / COPYRIGHT: 
+Licensee acknowledges that NDREAM owns all rights to the Product and related documentation and that all such rights, title and interest in the Product shall remain with NDREAM .
+
+LICENCE RESTRICTIONS:
+As conditions to this agreement, Licensee Agrees:
+
+1) Not to remove any copyright notices, trademarks, trade names, product names, links, comments, banners or proprietary rights notices from any copy of the product or related documentation.
+2) Not to grant sublicenses, leases or other rights to the Product or any related documentation to others, nor to transfer any rights to Licensee's copy of the Product to others.
+3) Not to sell or further distribute the product using any method, modified or unmodified. 
+3) You can download from the original distribution site and use this software freely. 
+
+This Product is provided on an "as is" basis, without any other warranties,
+or conditions, express or implied, including but not limited to warranties of merchantable quality, 
+merchantability or fitness for a particular purpose, or those arising by law, statute, usage of trade or course of dealing. 
+You assume the entire risk as to the results and performance of the Product.
+
+ndream shall not have any liability to you or any other person or entity for any indirect, 
+incidental, special or consequential damages whatsoever, 
+including but not limited to loss of revenue or profit, 
+lost or damaged data or other commercial or economic loss, 
+even if we have been aware of the possibility of such damages or they are foreseeable.
+
+TERMINATION
+THIS LICENSE IS EFFECTIVE UNTIL TERMINATED. User may terminate it by destroying or returning all copies of the Freeware Product and all of its component parts. THIS LICENSE WILL TERMINATE AUTOMATICALLY WITHOUT FURTHER ACTION FROM NDREAM IF USER FAILS TO COMPLY WITH ANY TERM OR CONDITION OF THIS AGREEMENT.
+
+
+Yes = I accept the license 
+No = I do not accept and do not install or use this software

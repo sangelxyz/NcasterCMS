@@ -1,0 +1,116 @@
+<html>
+<head>
+<title>ncaster: Search 2.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"> 
+  <p><font size="5"><img src="../images/ncaster.jpg"></font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&middot; 
+    <strong>Search 2</strong><br>
+    Over View: Search 2 is a simple backend search engine, it finds articles by 
+    both subject and article.</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><a href="templates.html#naming">Template 
+    styles used:</a></strong> template, tableend, tablestart</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">- 
+    Syntax run down.</font><font face="Verdana, Arial, Helvetica, sans-serif"><br>
+    <font size="2">- Search's including boolean.<br>
+    - Basic search box html.<br>
+    </font></font><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="2">- 
+    Variables &amp; tags for use in your templates.<br>
+    </font><font face="Verdana, Arial, Helvetica, sans-serif"><font size="2">- 
+    Supported features</font></font><font size="2"> </font></font></font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#33CCCC" size="5">Syntax 
+    .</font></font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Basic 
+    Search: ?load=search&amp;find=grasshopper<br>
+    Boolean Search: ?load=search&amp;find=grass+er&amp;boolean=y</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Custom 
+    field filtering is also accepted to filter the end results.</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#33CCCC" size="5">Seaching 
+    .</font><font size="5"><font color="#33CCCC"> </font></font></font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Searching 
+    in ncasters search module is actualy quite easy simply type view.php?load=search&amp;find=what 
+    to find from the browser, it's also possible to do a very basic boolean search 
+    such as view.php?load=search&amp;find=what+to<br>
+    that string will match the first string along with others. Search2 also supports 
+    the use of custom filters to filter the end result like in just about any 
+    other of ncasters modules.</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#33CCCC" size="5">Search 
+    code (HTML).</font><font size="5"><font color="#33CCCC"> </font></font></font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">This 
+    search code you should be abble to place any where with in a ncaster template, 
+    block or any type of ncaster module, you could also modified it to work on 
+    remote sites.</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Copy 
+    this part in to your header of your html file before &lt;/head&gt;.</font></p>
+  <p align="left"> 
+    <textarea name="textarea" cols="90" rows="10"><style type="text/css">
+<!--
+.boolean {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	font-weight: bold;
+}
+.gobutton {
+	background-color: #FFFFFF;
+	border: thin solid #000000;
+}
+-->
+</style></textarea>
+  </p>
+  <p align="left">Copy this code any where with in your body of your html page 
+    (this is where search box will appear).</p>
+  <p align="left">
+    <textarea name="textarea2" cols="90" rows="10"><form action="" method="post" name="go_search" id="go_search">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><input type="text" name="textfield"> 
+        <input name="Submit" type="submit" class="gobutton" value="Go"> 
+      </td>
+    </tr>
+    <tr>
+      <td><span class="boolean">Boolean Search:</span> 
+        <input name="boolean" type="radio" value="y" checked>
+        <input type="radio" name="boolean" value="n">
+        <input name="load" type="hidden" id="load" value="search"></td>
+    </tr>
+  </table>
+</form></textarea>
+  </p>
+  <div align="center">
+    <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#33CCCC" size="5">Variables 
+      &amp; tags.</font></font></p>
+    <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">All 
+      standed news tags are supported as well as custom news tags you define.</font></p>
+    <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#33CCCC" size="5">Supported 
+      Features .</font></font></p>
+  </div>
+  <ul>
+    <li> 
+      <div align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Entity 
+        2</font></div>
+    </li>
+    <li>
+      <div align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Custom 
+        Fields</font></div>
+    </li>
+    <li>
+      <div align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Custom 
+        filtering</font></div>
+    </li>
+    <li>
+      <div align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Fall 
+        back template system</font></div>
+    </li>
+    <li>
+      <div align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Optional 
+        flat file templates</font></div>
+    </li>
+  </ul>
+  <div align="center"></div>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#33CCCC" size="3"></font></font></p>
+  </div>
+</body>
+</html>

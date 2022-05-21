@@ -1,0 +1,6 @@
+PHP scripting is disabled by default, to enable it first enable entity then open view.php in your editor and change the $phpscripting variables value to yes. 
+While Caching will increase load time dramatically, however your pages will be static so any dynamic parts of your site will not update until the cache expires.
+In ncaster 1.7 you can now change your tags prefix this allows you to use the classic &lt;!--tagname--&gt;, 1.7 standard &lt;!$tag$&gt; or your own.
+Entity is a native template scripting language that you can use in your templates to give them a dynamic edge with the language you can apply functions to strings to manipulate objects or text on your page.
+Gzip content encoding increases load time for the end user however it does take a fair amount of cpu time to compress the page the recommended compression level is 3.
+If you enable caching make sure you set a decent expire time, the expire time is when you want the page to refresh, for sites that don't often update you may decide to only update every 1440m (24hors)

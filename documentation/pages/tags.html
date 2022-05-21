@@ -1,0 +1,292 @@
+<html>
+<head>
+<title>ncaster: Tags/Veriables &amp; Functions.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"> 
+  <p><font size="5"><img src="../images/ncaster.jpg"></font></p>
+  <p align="left"><font size="5">&middot; <font face="Verdana, Arial, Helvetica, sans-serif" size="3">Ncaster 
+    tags &amp; Verables.</font></font><br>
+    <font face="Verdana, Arial, Helvetica, sans-serif" size="2">Ncaster features 
+    a very extensive set of tags &amp; varables it's impossible to list them all 
+    here as you can define your own and each module can also define there own, 
+    these tags are the common set.<br>
+    <br>
+    Please see each modules documentation for there own tags.</font></p>
+</div>
+<div align="left"><font size="5"><font size="2"><font size="5"><font size="2"><font face="Verdana, Arial, Helvetica, sans-serif"> 
+  </font></font></font><font face="Verdana, Arial, Helvetica, sans-serif"> </font></font></font>
+  <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><b><font color="#33CCCC">Note: 
+    As of ncaster 1.7 the tag format has changed, old format was &lt;!--tagname--&gt; 
+    new format is &lt;!$tagname$&gt;, it was changed to prevent confusion and 
+    to make it easier to clean up the tags once your pages have been rendered.</font></b><font color="#33CCCC"><b><br>
+    </b></font></font></p>
+  <table width="100%" border="0" cellspacing="3" cellpadding="3">
+    <tr> 
+      <td valign="middle" colspan="2" bgcolor="#66FFFF" height="18"> <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><b>:: 
+          Main article template tags/variables::</b></font></div></td>
+    </tr>
+    <tr> 
+      <td valign="middle" bgcolor="#66FFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Tag</b></font></td>
+      <td width="50%" bgcolor="#CCFFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Replaces 
+        with</b></font></td>
+    </tr>
+    <tr> 
+      <td valign="middle" bgcolor="#66FFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&lt;!$news$&gt;</font></td>
+      <td width="50%" bgcolor="#CCFFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+        main tag, where ever this tag is where the content of most modules will 
+        be put.</font></td>
+    </tr>
+    <tr> 
+      <td valign="middle" bgcolor="#66FFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&lt;!$id$&gt;</font></td>
+      <td width="50%" bgcolor="#CCFFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+        current article id.</font></td>
+    </tr>
+    <tr> 
+      <td valign="middle" bgcolor="#66FFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&lt;$url_dynamic$&gt;</font></td>
+      <td width="50%" bgcolor="#CCFFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">A 
+        url to a full page article. (the quary link not the full url)</font></td>
+    </tr>
+    <tr> 
+      <td valign="middle" bgcolor="#66FFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&lt;$url$&gt;</font></td>
+      <td width="50%" bgcolor="#CCFFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Same 
+        as above, however it does not add the view.php in the link.</font></td>
+    </tr>
+    <tr> 
+      <td valign="middle" bgcolor="#66FFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&lt;!$subject$&gt;</font></td>
+      <td width="50%" bgcolor="#CCFFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+        article subject (title).</font></td>
+    </tr>
+    <tr> 
+      <td valign="middle" bgcolor="#66FFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&lt;!$news_des$&gt;</font></td>
+      <td width="50%" bgcolor="#CCFFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+        article description</font></td>
+    </tr>
+    <tr> 
+      <td valign="middle" bgcolor="#66FFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&lt;!$news_desc$&gt;</font></td>
+      <td width="50%" bgcolor="#CCFFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+        article description. same as &lt;!$news_des$&gt;</font></td>
+    </tr>
+    <tr> 
+      <td valign="middle" bgcolor="#66FFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&lt;!$username$&gt;</font></td>
+      <td width="50%" bgcolor="#CCFFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Posters 
+        user name.</font></td>
+    </tr>
+    <tr> 
+      <td valign="middle" bgcolor="#66FFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&lt;!$email$&gt;</font></td>
+      <td width="50%" bgcolor="#CCFFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Posters 
+        email address</font></td>
+    </tr>
+    <tr> 
+      <td valign="middle" bgcolor="#66FFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&lt;!$realname$&gt;</font></td>
+      <td width="50%" bgcolor="#CCFFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Posters 
+        Real Name</font></td>
+    </tr>
+    <tr> 
+      <td valign="middle" bgcolor="#66FFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&lt;!$avatar$&gt;</font></td>
+      <td width="50%" bgcolor="#CCFFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Posters 
+        Avatar</font></td>
+    </tr>
+    <tr> 
+      <td valign="middle" bgcolor="#66FFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&lt;!$time$&gt;</font></td>
+      <td width="50%" bgcolor="#CCFFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Article 
+        date posted, this tag can be formated in settings/options &gt; display 
+        settings.</font></td>
+    </tr>
+    <tr> 
+      <td valign="middle" bgcolor="#66FFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&lt;$bytesleft$&gt;</font></td>
+      <td width="50%" bgcolor="#CCFFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Amount 
+        of bytes in the full article.</font></td>
+    </tr>
+    <tr> 
+      <td valign="middle" bgcolor="#66FFFF">&lt;!$category_id$&gt;</td>
+      <td bgcolor="#CCFFFF">The current category id of article.</td>
+    </tr>
+    <tr> 
+      <td valign="middle" bgcolor="#66FFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&lt;!$category$&gt;</font></td>
+      <td width="50%" bgcolor="#CCFFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">The 
+        category the article is in.</font></td>
+    </tr>
+    <tr> 
+      <td valign="middle" bgcolor="#66FFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&lt;!$loadtime$&gt;</font></td>
+      <td width="50%" bgcolor="#CCFFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Time 
+        taken to load your page. (Not including gzip content encoding.) <b>(Full 
+        page layouts only)</b></font></td>
+    </tr>
+    <tr> 
+      <td valign="middle" bgcolor="#66FFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&lt;!$load$&gt;</font></td>
+      <td width="50%" bgcolor="#CCFFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Name 
+        of module loaded. <b>(Full page layouts only)</b></font></td>
+    </tr>
+    <tr> 
+      <td valign="middle" bgcolor="#66FFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">&lt;!$querys$&gt;</font></td>
+      <td width="50%" bgcolor="#CCFFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Quarys 
+        used when gernerating current page. <b>(Full page layouts only)</b></font></td>
+    </tr>
+    <tr> 
+      <td valign="middle" bgcolor="#66FFFF">&lt;!$reads$&gt;</td>
+      <td bgcolor="#CCFFFF">Amount of reads for current article.</td>
+    </tr>
+    <tr>
+      <td valign="middle" bgcolor="#66FFFF">&lt;!$uni_url$&gt;</td>
+      <td bgcolor="#CCFFFF">A special Universal url, this allows you to navagate 
+        related items with out changing the id, handy when making hubs for games 
+        or music when you dont know the link to the review, preview cheat ect.</td>
+    </tr>
+    <tr> 
+      <td valign="middle" bgcolor="#66FFFF">&lt;!$pagecount$&gt;</td>
+      <td bgcolor="#CCFFFF">Amount of pages in the current article ( This tag 
+        is only avaliable in the display module view.php?id=id of article)</td>
+    </tr>
+    <tr> 
+      <td valign="middle" bgcolor="#66FFFF">&lt;!$next_title$&gt;</td>
+      <td bgcolor="#CCFFFF">Next title of the next page in a multipage article. 
+        ( This tag is only avaliable in the display module view.php?id=id of article) 
+      </td>
+    </tr>
+    <tr> 
+      <td valign="middle" bgcolor="#66FFFF">&lt;!$next_link$&gt;</td>
+      <td width="50%" bgcolor="#CCFFFF"> Next link of the next page in a multipage 
+        article. ( This tag is only avaliable in the display module view.php?id=id 
+        of article)</td>
+    </tr>
+    <tr> 
+      <td colspan="2" valign="middle" bgcolor="#66FFFF"><div align="center"></div></td>
+    </tr>
+    <tr> 
+      <td valign="middle" colspan="2" bgcolor="#66FFFF"> <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><b>:: 
+          Special template tags/functions. ::</b></font></div></td>
+    </tr>
+    <tr> 
+      <td valign="middle" height="19" bgcolor="#66FFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b></font></td>
+      <td width="50%" height="19" bgcolor="#CCFFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>What 
+        it does.</b></font></td>
+    </tr>
+    <tr> 
+      <td valign="middle" bgcolor="#66FFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">[block]blockname[/block]</font></td>
+      <td width="50%" bgcolor="#CCFFFF"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Include 
+        a block in to your page.</font></td>
+    </tr>
+    <tr> 
+      <td valign="middle" bgcolor="#66FFFF"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">[nav]layout 
+        name[/nav]</font></td>
+      <td width="50%" bgcolor="#CCFFFF"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Includes 
+        a template from your database in to your current template.</font></td>
+    </tr>
+    <tr> 
+      <td valign="middle" bgcolor="#66FFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">[include]absolutepath[/include]</font></td>
+      <td width="50%" bgcolor="#CCFFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Includes 
+        any text page in to your template.</font></td>
+    </tr>
+    <tr> 
+      <td valign="middle" bgcolor="#66FFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">[load=modulename]</font></td>
+      <td width="50%" bgcolor="#CCFFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Loads 
+        a module.</font></td>
+    </tr>
+    <tr> 
+      <td valign="middle" colspan="2" bgcolor="#66FFFF"> <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><b>:: 
+          Entity template scripting language. (NOTE: You must enable entity in 
+          Settings/options &gt; Entity settings) ::</b></font></div></td>
+    </tr>
+    <tr> 
+      <td valign="middle" bgcolor="#66FFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Syntax</b> 
+        </font></td>
+      <td width="50%" bgcolor="#CCFFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>What 
+        it does</b></font></td>
+    </tr>
+    <tr valign="top"> 
+      <td colspan="2" bgcolor="#66FFFF">Please read entity2.html in the documentaion/pages 
+        folder. </td>
+    </tr>
+    <tr bgcolor="#66FFFF"> 
+      <td valign="middle" colspan="2" bgcolor="#66FFFF"> <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" size="3"><b>:: 
+          NCode Article formating tags (also known as NC-Code) (Only works if 
+          nc-code is enabled) ::</b></font></div></td>
+    </tr>
+    <tr> 
+      <td valign="middle" bgcolor="#66FFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Format 
+        Code</b> </font></td>
+      <td width="50%" bgcolor="#CCFFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>What 
+        it does</b></font></td>
+    </tr>
+    <tr> 
+      <td valign="middle" bgcolor="#66FFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">[center]text 
+        to center[/center]</font></td>
+      <td width="50%" bgcolor="#CCFFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Centers 
+        text, images ect.</font></td>
+    </tr>
+    <tr> 
+      <td valign="middle" bgcolor="#66FFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">[url]http://myurl.com[/url]</font></td>
+      <td width="50%" bgcolor="#CCFFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Creates 
+        a link to the page contained in the tags in this case it's http://myurl.com/</font></td>
+    </tr>
+    <tr> 
+      <td valign="middle" bgcolor="#66FFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">[url=http://myurl.com]my 
+        page[/url]</font></td>
+      <td width="50%" bgcolor="#CCFFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Creates 
+        a link to the page contained in the tags in this case it's http://myurl.com/ 
+        with the link name my page.</font></td>
+    </tr>
+    <tr> 
+      <td valign="middle" bgcolor="#66FFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">[imageid]0[/imageid]</font></td>
+      <td width="50%" bgcolor="#CCFFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Used 
+        in conjunction with the article upload function, this enables you to include 
+        the upload image directly in to your page it also creates the image tag. 
+        the 0 represents the upload box number in this case it's 0.</font></td>
+    </tr>
+    <tr> 
+      <td valign="middle" bgcolor="#66FFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">[articleid]0[/articleid]</font></td>
+      <td width="50%" bgcolor="#CCFFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Used 
+        in conjunction with the article upload function, this allows direct grab 
+        from your server or others to insert text in your article.</font></td>
+    </tr>
+    <tr> 
+      <td valign="middle" bgcolor="#66FFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">[infile]ftp/http/absolute 
+        path[/infile]</font></td>
+      <td width="50%" bgcolor="#CCFFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Includes 
+        a text document directly in to your article when processed.</font></td>
+    </tr>
+    <tr> 
+      <td valign="middle" bgcolor="#66FFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">[b]text 
+        to bold[/b]</font></td>
+      <td width="50%" bgcolor="#CCFFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Bolds 
+        text </font></td>
+    </tr>
+    <tr> 
+      <td valign="middle" bgcolor="#66FFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">[u]text 
+        to underline[/u]</font></td>
+      <td width="50%" bgcolor="#CCFFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Underlines 
+        text </font></td>
+    </tr>
+    <tr> 
+      <td valign="middle" bgcolor="#66FFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">[i]text 
+        to italic[/i]</font></td>
+      <td width="50%" bgcolor="#CCFFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">italic 
+        text </font></td>
+    </tr>
+    <tr> 
+      <td valign="middle" bgcolor="#66FFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">[email]michealo@ozemail.com.au[/email]</font></td>
+      <td width="50%" bgcolor="#CCFFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Creates 
+        a email link.</font></td>
+    </tr>
+    <tr> 
+      <td valign="middle" bgcolor="#66FFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">[quote]text 
+        to quote[/quote]</font></td>
+      <td width="50%" bgcolor="#CCFFFF"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">quotes 
+        text. </font></td>
+    </tr>
+  </table>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p align="center"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>ncaster 
+    site, ncaster script, ncaster deisign and artwork &copy; ndream 2003.</b></font></p>
+</div>
+  
+<div align="left"><blockquote>&nbsp;</blockquote>
+</div>
+</body>
+</html>

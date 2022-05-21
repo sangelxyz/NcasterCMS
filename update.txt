@@ -1,0 +1,122 @@
+// ** Project Ncaster Update Log/Joernal whatever. **
+Future to do's & idears.
+* Array & block statment support for entity.
+* poll script, maybe one day ill have a few mins free.
+* i whould like to start to recode the admin, epecialy the genfields rootine it's just
+getting to bulky.
+
+
+// ncaster 1.7.2 (build 3)
+* january 18, i have completed article authentication and the next release of ncaster 1.7.2.
+* ive fixed a few bugs in view.php mainly only small such as the time bug and the styling bug, ive also fixed a few links in the
+admin cp that did not have the session in them.
+
+// ncaster 1.7.1 (1.7 build 2)
+* September 19, it's time to start finishing ncaster 1.7 project up, release day is tomorrow night (Saterday)
+and there is still about 7 known bugs and about 5 small features and the upgrade script for ncaster 1.7b2 i have to fix before release, i have also added
+a the new universal link system where you can link to more then one article with the same id, you change
+the article by simply changing the category name example . ?rid=7&c=news and ?rid=7&c=reviews, if there is more then one
+it simple selects the first one found, i also scraped the require idear today and used made it a block system, it's compatable with
+phpnukes hopfully some people will port there works over. ^-^
+* today 17 auguest i started on ComCaster 2, which is ncasters comments module,
+i decided to make it more message board like then simply making it like a normal comments addon.
+* started to update the search module to make it compatable with the new relation system.
+* finaly added filtering for the news module.
+* fixed a bug in filtering, it should be more frendly to forms now.
+* updated the filtering today so it whould work with hub binding and related articles.
+* i finished the basic xml out put script, it's very basic.
+* redone the layout for the defalt install, looks much clener now and is much smaller. it should reduce 
+the size of the download by a nice margin.
+* finished a small relational addon for entity to take advantage of the new hubs feature, this new addon allows you to
+display related articles, more addons like this will come soon.
+* i have finished a new template naming system that allows you to change any template in a module,
+easily from the admin, this system is a 4 tie system it checks for a layout for each category, each module and each category in a module
+can be give a template each. modules can also have there own templates.
+* i have just added a new major feature called Hubs, these allow you to relate data, they
+are no liner and it is an extreamly easy way to maintain large sites.
+* After the buggy release of the public beta i started going though the code in search of
+bugs, i found quite a few and im quite pleased with the current version.
+
+// Ncaster 1.7 (First 1.7 Build)
+* Php is now allowed in templates, it's however disabled by defalt.
+* I have updated the entity 2 rootines, you can now use objects and functions and modifi variables more then once though out a template.
+* today i have added even more modules to entity rand, randstr, upper and lower
+* i have coded up some modules for entity 2, article list & color switch thats now a total of 5 plugins.
+* Added a new category system, it will be more compatable now with my future plans plus it has some nice new features
+such as a category avatar and template selectection while editing or adding a category, it also solves the assiging problem.
+* added the feature to bump articles.
+* fixed a small bug when editing custom fields, every time a field was edited it both added
+and updated the database where it should only do one, this has been fixed which should also fix
+all abnormalties when using custom fields.
+* New MorLock display engine, it now catchs pages display times are as low 0.004 before 0.02 
+this is only the first engine i plan on making it more flexable and allow dynamic functions to load.
+* added the ability to delete more then one template at a time.
+* done a fair bit of table fixes the could have resolted in display errors and confusion.
+* added resize function in the upload box, this enables resizing of images, you can select the width and height or select a pre-set size from a drop down.
+* Template editing has been updateded hopfully it's right this time, 
+you can use java script in your templates as well as &amp; tags ncaster now can determin the diffrence even with the restrictions
+of the text box.
+* Added clean up function to view.php, cleans un used tags.
+* tags format has changed it's now <!$tagname$> for main tags
+* View.php has been updated again, not a speed increase this time but now the urls are much shorter for articles. view.php?id=id this now no longer needs c= in the url
+quary in order to work. old way was view.php?load=arcview&article=id&c=categoryname.
+* Nav'E code has been updated it now features unique quary building code, this allows you to use as many nav tags as you want
+and it will still just use 1 quary no matter what, old system used one quary per nav tag.
+* formating system has been updated, it's now slightly faster but the real advantage is that you can now use [nav][/nav] in conjunction with entity for some truly
+dynamic dual layered content creation.
+* display tags <!--url--> <!--dynamic_url--> ect have been updated, in some browsers or xml generated pages the & can cuase an error
+this has been fixed, amoung those changers the template editing, news editing and saving has also been updated to hopfully fix the same problems above.
+* Made it so you do not need c=category anymore in linking to articles however you will still need it for most other modules.
+* started a xml feed script based on the view.php, it's very fast and features gzip compression.
+* Added  Backup script with Zip, Gzip and Bzip compression.
+* Addon Mangerment has been upgraded, you can now use [load=addonfoldername] to load any addons, note all addons will need to be updated
+to the latest versions.
+* Require function has been added to view.php this allows you to require in php pages in view.php!
+* genfields function has been moved in to it's own file, it was takin up to much code space and it was loaded when it was not
+needed this will hopfully increase the admin speed by as much as 10-20%.
+* Added SubStr function to Entity code this allows you to cut down the value of a field in bytes
+eg. field value= hello world, you could strip it down to two bytes or so to equal field value= he.
+* I wrote a Gconnection Class this enables remote connections to servers to download files. 
+* i have implemented a Wysiwyg Editor that ive been working on slowly for the last few weeks, it's not feature packed
+but it is very light weight (3.1kb) and does offer you some nice html features.
+* Nice shiny new admin skin, Like it ? i have also implemented a information box that will give you helpfull hints thoughtout ncaster admin.
+
+// Ncaster 1.6.5
+//(secound update)
+* Fixed upgrade rootine, it worked kinda, it removed 1/2 the posts in the process this new rootine is much smaller, faster and well it
+works perfect.
+* also a small bug in edit which disabled you from going back from old posts.
+
+// (First update).
+* Fixed <br> bug in custom fields.
+* fixed bug where on the post new article screen it showed the field sort value in side of a custom field.
+* Fixed bug that striped html from custom fields.
+* Added the ability to add pages to exisiting articles.
+* Added surfix so you can install more then one version of ncaster in the same database.
+* Added Entity basic, much easier to use and you can do most of the stuff from the php version.
+* Fixed bug where if you created a new field after you submited an article you whould not be abble to add a value to the new field.
+* Fixed comments addon, when going to options it reported genfields errors, this was due to a massive overhall in the last version.
+* Added group article headers for view.php, each days articles are grouped under there own header.
+
+
+// Ncaster 1.6
+* added new sort functions to add/remove fields.
+* Improved news display time by over 2x.
+* some bug fixes in nc-code.
+
+// Ncaster 1.5.5 updated/fixed list
+* new lines where not being replaced with <br> tags, this was casued with html striping enabled it whould strip the tags
+before being saved, this has been fixed
+* install.php has been fixed since some where having trouble with progressing though it, this was actualy due to extensive
+changers to the new php revision 4.3.0 this unfortunity disabled ncaster as well, it was a big fix but ncaster now works
+with the latest revision of php.
+* i have added 2 more field types to ncaster genre selection and system selection both aimed at game sites.
+* Enitiy has been implemented in this version basicly it allows you to script news styles in php.
+* nav'e code has been fixed, it was rendering the code where it shouldent have.
+* include has also been fixed it was only including a small amount of the files and printing it in the wrong places.
+* azlist, search actauly all addons have been updated. azlist and search have new features in azlist you now can assign a
+filter in search you can now highlight matched words from a search.
+
+M D Y
+7/27/2003
+Nathan.

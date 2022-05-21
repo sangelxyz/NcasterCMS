@@ -1,0 +1,103 @@
+<html>
+<head>
+<title>ncaster: Post/Edit.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"> 
+  <p><font size="5"><img src="../images/ncaster.jpg"></font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&middot; 
+    <strong>Azlist 2</strong><br>
+    Over View: Azlist2 is an updated version of azlist from ncaster 1.6.5 this 
+    new version features support for entity 2, Custom Filters &amp; custom fields 
+    which effectivly makes it one of the most flexable indexing systems avaliable.</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>Tip:</strong> 
+    Azlist is very powerfull at filtering by custom fields this abbility enables 
+    you to display what the user wants, you can apply up to 15 filters to one 
+    given display and one of those filters can contain unlimited match strings.</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">- 
+    Features.</font><br>
+    <font size="2" face="Verdana, Arial, Helvetica, sans-serif">- Editing Templates.<br>
+    - custom filters<br>
+    - Use full tips.</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#33CCCC" size="5">Features 
+    .</font></font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">- 
+    Custom fields now supported with in azlist styles.<br>
+    - You can now set a table start and table end template.<br>
+    - Custom field filtering is now supported.<br>
+    - Entity2,PHP scripting is also supported.<br>
+    </font> </p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#33CCCC" size="5">Editing 
+    templates .</font><font size="5"><font color="#33CCCC"> </font></font></font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Azlist 
+    templates are stored in file they can be found in admin/ex_templates/azlist 
+    folder.<br>
+    There is 4 templates they are broken up to make them easier to manage this 
+    is how they are broken up.</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>aztemplate.tpl</strong> 
+    : This is the first template printed, it should contain a list of all the 
+    letters you can select e.g a|b|c ect all linked to the apprite sections.<br>
+    <strong>tableend.tpl</strong> : the end of the table tag in most cases this 
+    will be just &lt;/table&gt; however if you want to add additional html at 
+    the bottom of the table end please feel free to do so.<br>
+    <strong>tablestart.tpl</strong> : is the table start, this can contain all 
+    the headers for all the table cells.<br>
+    <strong>template.tpl</strong> : template.tpl this is the template that gets 
+    repeated over and over to form your azlist index, this template can contain 
+    entity code.</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">All 
+    templates can contain.<br>
+    * Tags (but limited)<br>
+    only Template.tpl can contain.<br>
+    * Entity<br>
+    * tags (all including custom)<br>
+    * PHP if enabled</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#33CCCC" size="5">Custom 
+    filters .</font><font size="5"><font color="#33CCCC"> </font></font></font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">one 
+    of ncasters very unquie features is the ability to filter by custom fields 
+    lets look at a index of results by azlist.</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><img src="../images/filter1.jpg" width="423" height="343"></font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Here 
+    we have a list of games each have there own console system but what if we 
+    wanted to just show the results that where on the gamecube system ? <br>
+    If we apply f_system=Gamecube to the url we can show just the systems with 
+    gamecube heres a look at the new list.</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><img src="../images/filtergc.jpg" width="423" height="346"></font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Much 
+    beater, we could also apply a dubble value for if we wanted to match 2 systems 
+    but by the same custom field by doing<br>
+    f_system=Ps2/Xbox</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><img src="../images/filterxbox.jpg" width="423" height="346"></font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Easy enought ?</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#33CCCC" size="5">Usefull 
+    tips .</font><br>
+    1. Entity allows you to apply dynamic effects on your azlist cells, use it 
+    to create profesional looking tables (see below)<br>
+    </font></p>
+  <table width="75%" border="1" cellpadding="0" cellspacing="0" bordercolor="#000000">
+    <tr bgcolor="#00FFFF"> 
+      <td width="3%"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">1</font></td>
+      <td width="97%" bgcolor="#00FFFF"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">My 
+        shoping list</font></td>
+    </tr>
+    <tr bgcolor="#0099CC"> 
+      <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">2</font></td>
+      <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">My car photos</font></td>
+    </tr>
+    <tr bgcolor="#00FFFF"> 
+      <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">3</font></td>
+      <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">websites</font></td>
+    </tr>
+  </table>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">2. 
+    Use custom filters, custom filters enables you to filter content for your 
+    user to show the least results while displaying the most information the user 
+    wants, to use custom filters is easy from the url just add f_yourcustomfieldname=value 
+    to match.</font></p>
+  <p align="left">&nbsp; </p>
+</div>
+</body>
+</html>

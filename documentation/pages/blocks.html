@@ -1,0 +1,95 @@
+<html>
+<head>
+<title>ncaster: Blocks system</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"> 
+  <p><font size="5"><img src="../images/ncaster.jpg"></font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&middot; 
+    <strong>Ncaster Blocks System</strong><br>
+    Over View: Blocks are small files of code or html, ncaster can load an execute 
+    these files and integrate them in to your page.</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>Tip:</strong> 
+    If you create a block make sure you keep your code clean and try and reuse 
+    as much code as possible, Nuke Blocks can be integrated in to ncasters block 
+    system also however you will need to install nuke in most cases to use that 
+    feature.</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">- 
+    Using a block.</font><font face="Verdana, Arial, Helvetica, sans-serif"><br>
+    <font size="2">- Creating a block.<br>
+    - Developer notes.</font></font><font face="Verdana, Arial, Helvetica, sans-serif"><font size="2"><br>
+    - Block FAQ.</font></font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#33CCCC" size="5">Syntax 
+    .</font></font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">[block]name 
+    of block[/block]<br>
+    soon there will be a Entity 2 module, keep a look out at http://ncaster.cjb.net 
+    forums. </font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#33CCCC" size="5">Using 
+    a block.</font><font size="5"><font color="#33CCCC"> </font></font></font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Blocks 
+    are supported in all full page templates and you can use more then one block 
+    to make up a page, blocks can contain any type of code however only php will 
+    be executed.</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">In 
+    one of your full page templates you can place the block include code any where 
+    with in it [block]block name[/block], the block will be executed and placed 
+    in the correct location of your page</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#33CCCC" size="5">Creating 
+    a block.</font><font size="5"><font color="#33CCCC"> </font></font></font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">When 
+    creating Blocks you must follow the following rules.</font></p>
+</div>
+<ol>
+  <li> 
+    <div align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Make 
+      sure the file name ends with a .php extension and that this file is placed 
+      in the block folder.</font></div>
+  </li>
+  <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">To stop the 
+    file from running as a standalone application insert the following bit of 
+    php in to your code <br>
+    if(preg_match(&quot;filename of your block&quot;,$PHP_SELF) ) { die('block 
+    cannot run in standalone mode') }</font></li>
+</ol>
+<p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">A simple Block 
+  'ncaster' </font></p>
+<p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&lt;?php<br>
+  echo 'hello world';<br>
+  ?&gt;</font></p>
+<p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">A simple block 
+  'ncaster' &amp; 'nuke'</font></p>
+<p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&lt;?php<br>
+  $content = 'hello world';<br>
+  ?&gt;</font></p>
+<p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">ncaster supports 
+  both, if you have any additional questions please don't hesitate to ask at http://ncaster.cjb.net/ 
+  (our forums). </font></p>
+<div align="center"> 
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#33CCCC" size="5">Developer 
+    notes .</font><font size="5"><font color="#33CCCC"> </font></font></font></p>
+</div>
+<ul>
+  <li> 
+    <div align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">When 
+      dealing with user input by Get or Post use the $input variable, this variable 
+      is populated by ncaster and is filtered.</font></div>
+  </li>
+  <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">You should try 
+    and limit the query's used by blocks if possible, ncasters debug functions 
+    should come in handy for working out the amount of query's your block is using 
+    to the amount of resources your block uses.</font></li>
+  <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Use ncaster's 
+    functions where possible, for example a sql query use $sql-&gt;query(&quot;your 
+    query&quot;); this allows for future compatibility with other databases.</font></li>
+  <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">If you have 
+    created a block please send it to michealo@ozemail.com.au these will be later 
+    included on the ncaster web site.</font></li>
+</ul>
+<div align="center"> 
+  <p align="left">&nbsp;</p>
+</div>
+</body>
+</html>

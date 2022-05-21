@@ -1,0 +1,144 @@
+<html>
+<head>
+<title>ncaster: Post/Edit.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"> 
+  <p><font size="5"><img src="../images/ncaster.jpg"></font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&middot; 
+    <strong>Displaying articles</strong><br>
+    Over View: While a cms managers your articles a display engine spits out the 
+    actual display, ncaster 1.7 is equipet with the MorLock engine which should 
+    be abble to recreate anything you can think of in a dynamic maner.</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#33CCCC" size="5">Morlock 
+    supported features.</font></font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">- 
+    Custom fields now supported in most first part modules.<br>
+    - You can dynamicly change tag values or set new tags and variables on the 
+    fly. <br>
+    - Custom field filtering.<br>
+    - Entity2, PHP scripting is also supported.<br>
+    - Article Binding, though the use of the hubs module.</font> </p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#33CCCC" size="5">Displaying 
+    Articles .</font></font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#33CCCC" size="5">1. 
+    Creating a template.</font></font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">In 
+    order to display a article you will first need to assign a template, this 
+    can be done by login in to your admin then click <font color="blue">settings 
+    &gt; Add full page layout</font> now copy and past your template to the main 
+    template box and give the template a title or select a title from the - <a href="pages/ptalist.html">Possible 
+    template assiciations</a> - drop down list.</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">now 
+    insert the correct tags in your template so content can be displayed, heres 
+    some tags and there uses.</font></p>
+  <table width="75%" border="0" cellspacing="0" cellpadding="0">
+    <tr bgcolor="#CCCCCC"> 
+      <td width="28%"><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>Tag</strong></font></td>
+      <td width="72%"><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>Use</strong></font></td>
+    </tr>
+    <tr> 
+      <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&lt;!$news$&gt; 
+        or &lt;!$content$&gt;</font></td>
+      <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Displays 
+        the specified modules or the current articles news out put, if no module 
+        is run by ?load= it will defalt to the news display module unless of couse 
+        you are loading a page with id= or rid= in this case a display module 
+        is loaded. You need this tag in your full page templates to see any output 
+        for news or other wise.</font></td>
+    </tr>
+    <tr> 
+      <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&lt;!$subject$&gt;</font></td>
+      <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Displays 
+        the current articles subject.</font></td>
+    </tr>
+    <tr> 
+      <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&lt;!$description$&gt; 
+        or &lt;!$news_desc$&gt; or &lt;!$news_des$&gt;</font></td>
+      <td valign="top"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Displays 
+        the current articles news description.</font></td>
+    </tr>
+  </table>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">note: 
+    more <a href="tags.html">tags</a> can be found on the tags page with in this 
+    documentation (<a href="tags.html">here</a>)</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Example 
+    template:<br>
+    <font color="blue">&lt;html&gt;&lt;head&gt;&lt;/head&gt;<br>
+    &lt;title&gt;My page: &lt;!$subject$&gt;&lt;/title&gt;<br>
+    &lt;body&gt;&lt;!$news$&gt;&lt;/body&gt;<br>
+    &lt;/html&gt; </font></font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#33CCCC" size="5">2. 
+    assigning the template.</font></font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Ncaster 
+    supports two template assigning methods one you may have already used with 
+    out knowing this one is called the title assigning method, by placing a specially 
+    formatted title in to the title of your new layout it will automatically be 
+    assigned to the module and category it's pointing to <font color="blue">example: 
+    module:display;</font>.<br>
+    In that example if you load a article using ?id= it will use that template 
+    no mater what category.</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+    second type of assigning ncaster supports is category based, these category 
+    based assigns act as universal templates which can be overwrote by the above 
+    method, to assign a universal category template click settings &gt; assign 
+    a template.</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#33CCCC" size="5">Editing 
+    templates for modules.</font><font size="5"><font color="#33CCCC"> </font></font></font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">There 
+    is two ways to do this, you can edit the files in ex_templates/ folder or 
+    you can use the <a href="pages/ptalist.html">new assign method</a>. To use 
+    the new name based assiging method allows you to assign templates to any category 
+    with in a module and even beater it allows you to assign styles with in the 
+    module please see <a href="pages/ptalist.html">name based assiging</a> for 
+    more information.</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#33CCCC" size="5">Custom 
+    filters .</font><font size="5"><font color="#33CCCC"> </font></font></font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">one 
+    of ncasters very unquie features is the ability to filter by custom fields 
+    lets look at a index of results by azlist.</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><img src="../images/filter1.jpg" width="423" height="343"></font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Here 
+    we have a list of games each have there own console system but what if we 
+    wanted to just show the results that where on the gamecube system ? <br>
+    If we apply f_system=Gamecube to the url we can show just the systems with 
+    gamecube heres a look at the new list.</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><img src="../images/filtergc.jpg" width="423" height="346"></font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Much 
+    beater, we could also apply a dubble value for if we wanted to match 2 systems 
+    but by the same custom field by doing<br>
+    f_system=Ps2/Xbox</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><img src="../images/filterxbox.jpg" width="423" height="346"></font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Easy 
+    enought ?</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#33CCCC" size="5">Usefull 
+    tips .</font><br>
+    1. Entity allows you to apply dynamic effects on your azlist cells, use it 
+    to create profesional looking tables (see below)<br>
+    </font></p>
+  <table width="75%" border="1" cellpadding="0" cellspacing="0" bordercolor="#000000">
+    <tr bgcolor="#00FFFF"> 
+      <td width="3%"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">1</font></td>
+      <td width="97%" bgcolor="#00FFFF"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">My 
+        shoping list</font></td>
+    </tr>
+    <tr bgcolor="#0099CC"> 
+      <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">2</font></td>
+      <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">My car photos</font></td>
+    </tr>
+    <tr bgcolor="#00FFFF"> 
+      <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">3</font></td>
+      <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">websites</font></td>
+    </tr>
+  </table>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">2. 
+    Use custom filters, custom filters enables you to filter content for your 
+    user to show the least results while displaying the most information the user 
+    wants, to use custom filters is easy from the url just add f_yourcustomfieldname=value 
+    to match.</font></p>
+  <p align="left">&nbsp; </p>
+</div>
+</body>
+</html>

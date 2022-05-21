@@ -1,0 +1,3 @@
+Build list entry's save rendering time and database query's, use them where ever possible.
+In ncaster 1.7 you have the option to store the compiled list entry in your database, this is more secure then a file and it still keeps most of the speed.
+Build list templates can contain entity code like all other templates.

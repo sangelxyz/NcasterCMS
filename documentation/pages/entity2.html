@@ -1,0 +1,307 @@
+<html>
+<head>
+<title>ncaster: Post/Edit.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"> 
+  <p><font size="5"><img src="../images/ncaster.jpg"></font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&middot; 
+    <strong>Entity 2 </strong><br>
+    Over View: Entity was first introduced in ncaster 1.5.5 it allowed you to 
+    do very basic template modification, entity2 expands upon this idear and also 
+    introduces varaible modification by pre-programed functions.</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>Tip:</strong> 
+    Entity is one of two scripting languages supported in your ncaster templates, 
+    as of ncaster 1.7 you can now directly place php code with in each templates, 
+    php is faster however it may be to flexable and confusing for some.</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>Notice: 
+    </strong>The entity 3 will have a new syntax, however this language will be 
+    reserved for the time being for the IonGate series of ncaster.</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>Notice: 
+    </strong>It's almost impossible to keep a complete list of entity modules 
+    since they are so easy to make and offer very broad functions and features 
+    in order to get a full up-to-date list visit http://ncaster.cjb.net or view 
+    your plugin's directory each plugin contains options and how to use the function.</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">- 
+    Syntex run down.</font><br>
+    <font size="2" face="Verdana, Arial, Helvetica, sans-serif">- Creating modules.<br>
+    - Module list for this version.</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#33CCCC" size="5">Syntex 
+    .</font></font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Like 
+    all scripting languages entity has a faily consistent syntex which it uses 
+    to apply functions and objects to your templates, entity is realy powerfull 
+    at reducing the amount of code needed since the entity scripting language 
+    is target towards handling templates and objects.</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>Function 
+    syntex.</strong><br>
+    <font color="blue">{$var|functionname|&quot;parms&quot;,&quot;parms&quot;}</font><br>
+    In a function you have 3 possible options to set heres a list.<br>
+    1. The variable to modifi, this can be an exsisting variable or you can create 
+    a new one all returned data is stored in this variable for later use.<br>
+    2. function name, this is simply the name of the function you wish to pass 
+    your variable to.<br>
+    3. parms, there can be an unlimited number of parms and it's possible to have 
+    optional parms. Parms are used to pass information of to each function.</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>Comment 
+    syntex</strong><br>
+    Comments are handy for marking what code does, comments are removed when the 
+    page has been processed.<br>
+    <font color="blue">{* comment here *}</font></font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>Variable 
+    syntex</strong><br>
+    </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif">The entity 
+    parser is capable of settings vars containg the data you set, to set a var 
+    use the setvar function<br>
+    <font color="blue">{$varname|setvar|&quot;what to put in var&quot;}</font><br>
+    You can then use this var though out other functions by using the syntex.<br>
+    <font color="blue">$varname;</font><br>
+    Ncaster sets a fair few of it's own vars when creating templates, these vars 
+    can be changed on the fly before they are printed to screen, each var you 
+    set can also be echo'ed to screen using the ncaster tag syntex<br>
+    <font color="blue">&lt;!$varname$&gt;</font><br>
+    Note: tags are processed at the very end, so the following code will not output 
+    what you expect<font color="blue">.<br>
+    </font></font><font color="blue" size="2" face="Verdana, Arial, Helvetica, sans-serif">{$varname|setvar|&quot;yup&quot;}<br>
+    &lt;!$varname$&gt;<br>
+    {* current value is yup *}<br>
+    </font><font color="blue" size="2" face="Verdana, Arial, Helvetica, sans-serif">{$varname|cap1str|&quot;$varname;&quot;}<br>
+    {* current value is Yup *} <br>
+    &lt;!$varname$&gt; </font><br>
+    <font size="2" face="Verdana, Arial, Helvetica, sans-serif">All the ncaster 
+    template tags in this example will print Yup, this is becouse tags are processed 
+    last after entity, if you wish to dynamicly print the result of a change you 
+    can use the nprint function, heres the same code rewrote using it.<br>
+    </font><font color="blue" size="2" face="Verdana, Arial, Helvetica, sans-serif">{$varname|setvar|&quot;yup&quot;}<br>
+    {* current value is yup *}<br>
+    {$varname|nprint|&quot;&quot;}<br>
+    {$varname|cap1str|&quot;$varname;&quot;}<br>
+    {* current value is Yup *}<br>
+    {$varname|nprint|&quot;&quot;}<br>
+    </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+    By using the nprint in this example, the output text will change as the script 
+    is parsed since the nprint function is part of entity, this is very usefull 
+    for dynamic text printing such as a number that increamtes for example, static 
+    tag printing however is faster and looks neater in your templates a good example 
+    of a static tag whould be.<br>
+    <br>
+    <font color="blue">{* lets set the path to our webstuff folder*}<br>
+    {$webstuff|setvar|&quot;http://mydomain.com/webstuff&quot;}<br>
+    &lt;html&gt;<br>
+    &lt;head&gt;&lt;/head&gt;<br>
+    &lt;title&gt;mysite&lt;/title&gt;<br>
+    &lt;body&gt;My webstuff folder can be found at &lt;!$webstuff$&gt;&lt;/body&gt;<br>
+    &lt;/html&gt; </font><br>
+    <br>
+    The code above allows you to change the webstuff folder by just changing the 
+    one varaible, when dealing with more then one template using variables is 
+    key to fast management of your ncaster templates.</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>How 
+    to change Field tag varaibles</strong><br>
+    The ncaster template engine assigns varables on the fly to entity these can 
+    be changed dynamicly before printing, much in the same way you set your own 
+    varaibles, to access a field tag varaible you use the varaible syntex<br>
+    <font color="blue">$fieldname</font><br>
+    Ill show you a basic example.<br>
+    <font color="blue">{* Lets cut the field (subject) down to 4 bytes long *}<br>
+    {$subject|substr|&quot;4&quot;}</font><br>
+    <br>
+    The subject tags output will now never be bigger then 4 bytes in length.</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Starting 
+    out:<br>
+    Lets code a basic hello world Script.<br>
+    <font color="blue">{* This is a comment, it does not show when your templates 
+    displayed *}<br>
+    {* Set var*}<br>
+    {$var|setvar|&quot;Hello World&quot;}<br>
+    {* Print $var*}<br>
+    {$var|nprint|&quot;$var&quot;}</font></font></p>
+  <p align="left">OR</p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="blue">{* 
+    This is a comment, it does not show when your templates displayed *}<br>
+    {* Set var*}<br>
+    {$var|setvar|&quot;Hello World&quot;}<br>
+    {* Print $var*}<br>
+    &lt;!$var$&gt;</font></font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Now 
+    lets apply some functions to the var.<br>
+    <font color="blue">{* Set var*}<br>
+    {$var|setvar|&quot;Hello World&quot;}<br>
+    <br>
+    </font></font> <font color="blue" size="2" face="Verdana, Arial, Helvetica, sans-serif">{* 
+    Cut $var in to two bytes substring*}<br>
+    {$var|substr|&quot;2&quot;} </font></p>
+  <p align="left"><font color="blue" size="2" face="Verdana, Arial, Helvetica, sans-serif">{* 
+    Print $var*}<br>
+    {$var|nprint|&quot;$var&quot;}</font><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+    <br>
+    Now our script will simply print He.</font></p>
+  <p align="left">&nbsp; </p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#33CCCC" size="5">Creating 
+    Modules .</font><font size="5"><font color="#33CCCC"> </font></font></font></p>
+  <p align="left"><font color="#33CCCC" size="3" face="Verdana, Arial, Helvetica, sans-serif">Creating 
+    Plugin functions.</font><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+    Lets start of with a basic script entity.function.counter.php</font></p>
+  <p align="left">function entity_function_counter($func,$options,$code,$varname) 
+    {<br>
+    global $Parse;<br>
+    if (count($options) &gt; '1'){<br>
+    echo 'To many argument\'s';<br>
+    }<br>
+    elseif (count($options) &lt; '1'){<br>
+    echo 'Missing argument 2';<br>
+    }<br>
+    else {<br>
+    $Parse-&gt;entity_setvar($varname,$code+1);<br>
+    if ($options[0] == 'y') {<br>
+    return $code+1;<br>
+    }<br>
+    }<br>
+    }<br>
+    <br>
+    <strong>Rules</strong></p>
+</div>
+<ul>
+  <li> 
+    <div align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">All 
+      modules must follow the naming system.<br>
+      <strong>File:</strong> entity.type.function.php<br>
+      <strong>Types:</strong> function, object. (more will be added in the future)</font></div>
+  </li>
+  <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">All plugins 
+    must be keeped in the plugin folder.</font></li>
+  <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Your main function/object 
+    must follow the naming system.<br>
+    <strong>Function:</strong> entity_type_function<br>
+    <strong>Object:</strong> <br>
+    </font></li>
+</ul>
+<div align="center">
+<p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">To 
+    call a entity plugin you use the following in your templates.<br>
+    {pluginname|&quot;option&quot;,&quot;option2&quot;,&quot;ect&quot;}<br>
+    if there is no options<br>
+    {$varname|pluginname|&quot;&quot;}<br>
+    <br>
+    To call our counter script we whould use something like this.<br>
+    {$varname|ex_counter|&quot;y&quot;}<br>
+    Note the uniq id this keeps the tag diffrent which allows us to show the progress 
+    of the increamated number.</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Now 
+    we have a counter that increamtes every time the module is used.<br>
+    </font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#33CCCC" size="5">Preinstalled 
+    function Modules .</font><br>
+    </font></p>
+  <table width="100%" border="1" bordercolor="#000000">
+    <tr> 
+      <td width="27%"><div align="center"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>Name 
+          ( * = is a str function just appended str to the end of the function)</strong></font></div></td>
+      <td width="44%"><div align="center"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>Options 
+          + example</strong></font></div></td>
+      <td width="29%"><div align="center"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>What 
+          it does</strong></font></div></td>
+    </tr>
+    <tr valign="top"> 
+      <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">isset</font></td>
+      <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">(1) variable 
+        name (2) replace with<br>
+        {$var|isset|&quot;news&quot;,&quot;Subject Cool&quot;} </font></td>
+      <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Checks for 
+        a value (option 1), if there is no value it replaces it with (option 2).</font></td>
+    </tr>
+    <tr valign="top"> 
+      <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">isnotset</font></td>
+      <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">(1) variable 
+        name (2) replace with<br>
+        {$var|isnotset|&quot;news&quot;,&quot;Subject Cool&quot;} </font></td>
+      <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Reverse 
+        of the above.</font></td>
+    </tr>
+    <tr valign="top"> 
+      <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">substr</font></td>
+      <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">(1) bytes 
+        to cut to<br>
+        {$var|substr|&quot;4&quot;} </font></td>
+      <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Cuts the 
+        assigned varaible down to (option 1) amount of bytes.</font></td>
+    </tr>
+    <tr> 
+      <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">counter</font></td>
+      <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">(1) print 
+        (possible values y or nothing)<br>
+        {$var|counter|&quot;y&quot;} or {$var|counter|&quot;&quot;} </font></td>
+      <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Replaces 
+        with an increamated number, (option 1) if y is it's value the number gets 
+        printed to screen if there is no value it just increamates the string 
+        its self.</font></td>
+    </tr>
+    <tr> 
+      <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">rand *</font></td>
+      <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">unlimited 
+        options<br>
+        {$var|rand|&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;} 
+        <br>
+        <br>
+        </font></td>
+      <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Replaces 
+        with a random item generated from the arrgs. then it prints to screen 
+        the radom item.</font></td>
+    </tr>
+    <tr> 
+      <td>color_switch</td>
+      <td>(1) color 1 (2) color 2<br> <font size="2" face="Verdana, Arial, Helvetica, sans-serif">{$var|color_switch|&quot;red&quot;,&quot;blue&quot;} 
+        </font> </td>
+      <td>Switchs inbetween the two options for each load, this makes a basic 
+        patten, it's not limited to just a color but can be used on other text 
+        also. </td>
+    </tr>
+    <tr> 
+      <td>lower</td>
+      <td>None<br> <font size="2" face="Verdana, Arial, Helvetica, sans-serif">{$var|lower|&quot;&quot;} 
+        </font></td>
+      <td>Converts the string to lower case</td>
+    </tr>
+    <tr> 
+      <td>upper</td>
+      <td>None<br> <font size="2" face="Verdana, Arial, Helvetica, sans-serif">{$var|upper|&quot;&quot;} 
+        </font></td>
+      <td>convets the string to uppercase</td>
+    </tr>
+    <tr> 
+      <td>cap1 *</td>
+      <td>(1) text to format<br> <font size="2" face="Verdana, Arial, Helvetica, sans-serif">{$var|cap1|&quot;&quot;} 
+        </font></td>
+      <td>converts the first letter to uppercase</td>
+    </tr>
+    <tr> 
+      <td>repeat</td>
+      <td>(1) the amount of times to repeat the string (2) the string.<br> <font size="2" face="Verdana, Arial, Helvetica, sans-serif">{$var|repeat|&quot;2&quot;,&quot;HEHE 
+        He! &quot;} </font> </td>
+      <td>repeats a string (option 1) amount of times then prints to screen.</td>
+    </tr>
+    <tr> 
+      <td>lengthstr*</td>
+      <td>(1) string to find length.<br> <font size="2" face="Verdana, Arial, Helvetica, sans-serif">{$var|lengthstr|&quot;Hello&quot;} 
+        </font> </td>
+      <td>works out the string length and sets the value to the assigned variable.</td>
+    </tr>
+    <tr> 
+      <td>cap1wordstr*</td>
+      <td>(1) string to apply function<br> <font size="2" face="Verdana, Arial, Helvetica, sans-serif">{$var|cap1wordstr|&quot;My 
+        car is lost&quot;} </font> <br> </td>
+      <td>makes the first letter of each word a upper case.</td>
+    </tr>
+    <tr> 
+      <td>nprint</td>
+      <td>(1) text to print (optional)</td>
+      <td>prints the text to screen, if no text it prints the assigned varaibles 
+        value. </td>
+    </tr>
+  </table>
+  <p align="left">You can download more entity modules at http://ncaster.cjb.net/</p>
+</div>
+</body>
+</html>

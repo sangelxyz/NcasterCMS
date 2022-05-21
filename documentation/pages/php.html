@@ -1,0 +1,104 @@
+<html>
+<head>
+<title>ncaster: Php scripting.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"> 
+  <p><font size="5"><img src="../images/ncaster.jpg"></font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&middot; 
+    <strong>Php Template scripting</strong><br>
+    Over View: Php was in ncaster 1.5.5 however it was very limited.</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>Tip:</strong> 
+    While php is faster then entity, entity features much easier to use code and 
+    since there is many many functions aimed at template manuplation it's a god 
+    send to use it is also more secure then allowing direct input of php in to 
+    your templates on the other hand php is more flexable and you can use ncasters 
+    libery of functions in your code.</font></p>
+  <p align="left"><font face="Verdana, Arial, Helvetica, sans-serif">Note: Php is displabled by defalt in view.php, php is a very 
+    flexable language thus it could be a very powerfull weapon againsed your site 
+    if used the wrong way or by the wrong person. </font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">- 
+    Syntex run down.</font><font face="Verdana, Arial, Helvetica, sans-serif"><br>
+    <font size="2">- Scripting with 
+    php.<br>
+    - Module list (classes, functions).</font></font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#33CCCC" size="5">Syntex 
+    .</font></font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">(you 
+    should read up on php at php.net)</font></p>
+  <p align="left">&nbsp;</p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#33CCCC" size="5">Scripting 
+    with php.</font><font size="5"><font color="#33CCCC"> </font></font></font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Before 
+    we start, ncaster supports both &lt;?php and &lt;? to parse php regardless 
+    of weaver small tags are enabled by your server, however it does not support 
+    the quick echo tag &lt;?= keep this in mind when scripting templates.</font></p>
+  <p align="left"><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif">Basic 
+    hello world script.<br>
+    &lt;?<br>
+    $var = 'hello world';<br>
+    return $var;<br>
+    ?&gt; </font></p>
+  <p align="left"><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif">See 
+    how the variable is returned insted of printed, in order for you to display 
+    in place of the php starting and ending tags you need to return the data back 
+    to ncasters template parser, if you just print or echo to the screen your 
+    text will appear at the very top this is done to give you more control over 
+    your template.<br>
+    <br>
+    &lt;?<br>
+    echo 'hello world'; <br>
+    ?&gt;</font></p>
+  <p align="left"><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif">Will 
+    still however work. Since all data is returned and it's only possible to return 
+    a value you must append to your out put varaible what ever that may be so 
+    to add more text to a string as your script progresses you can do something 
+    like this</font></p>
+  <p align="left"><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif">&lt;?<br>
+    $var = 'hello';<br>
+    $var .= ' World';<br>
+    return $var;</font><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+    ? &gt;</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">You 
+    can not however do.<br>
+    &lt;?<br>
+    if ($var == $var2) {</font><br>
+    ?&gt;<br>
+    echo 'hey';<br>
+    &lt;?<br>
+    }<br>
+    ?&gt; <br>
+    <br>
+    <font size="2" face="Verdana, Arial, Helvetica, sans-serif">This will cause 
+    a syntex error and the php will not get parsed.</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">To 
+    access vars set by ncasters template parser you can use $this-&gt;varindex['varname'] 
+    directly however in functions you will need to use<br>
+    $Parse-&gt;varindex['varname'] .</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">You 
+    can-not access set entity vars however you can access php vars from entity.</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#33CCCC" size="3">Did 
+    you know..<br>
+    <font color="#000000" size="2">1. You can include any number of &lt;?php, 
+    &lt;? start and end statments with in any template including news stlyes. 
+    <br>
+    2. Php is very fast however it does not have the in built function handling 
+    of entity, if you make a function in a news style it will cause an error becouse 
+    it will be redecleared for each load, however if you put it in your full page 
+    template it will work fine.<br>
+    3. Ncasters parser supports both &lt;?php and &lt;? php starting tags.<br>
+    4. remember to return values that you want shown in the correct place.<br>
+    5. You can access ncasters loaded classes directly such as Gcon (file opening 
+    functions, by remote or local), ncaster parser or the database connection 
+    engine, you can also load other classes or functions in to your scripts using 
+    phps include or require.<br>
+    6. Ncaster has a built in libery of classes they range from zip, image manuplation 
+    (resize, watermark), file opening remote/local and article include.<br>
+    7. Php is one of 2 scripting languages supported by the ncaster parser.<br>
+    8. You can use php with entity and both can interact with each other.</font></font></font></p>
+  <p align="left">&nbsp;</p>
+  </div>
+</body>
+</html>

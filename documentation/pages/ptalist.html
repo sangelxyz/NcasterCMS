@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>template naming system</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body>
+<p align="center"><font size="5"><img src="../images/ncaster.jpg"></font></p>
+<p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&middot; 
+  <strong>Naming system</strong><br>
+  Over View: the template naming system was introduced to get at the hard to get 
+  sections in a module and allow you to skin them with html, the naming system 
+  is simple and in most cases you dont need to type a thing since a list of most 
+  templates names are generated for you in the edit/add template dialog.</font></p>
+<p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#33CCCC" size="5">How 
+  it works.</font></font></p>
+<p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Ncaster 
+  uses a 5 tie template system it allows you to have One Global category template 
+  for each category, One Global module template for each module, One Global template 
+  for each modules category &amp; One template per style defined in each module, 
+  this provides you will absolutly 100% control of the final out put if the module 
+  supports the naming system.</font></p>
+<p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#33CCCC" size="5">Naming.</font></font></p>
+<p align="left"><font size="2" face="Arial, Helvetica, sans-serif">Keys used in 
+  this syntex table.<br>
+  %modulename% = the module you are assiging this template to.<br>
+  %style% = the style you are assiging this template to, styles are defined in 
+  each module.<br>
+  %category% = the category to assign this module to, must be of integer type. 
+  ex: 7</font></p>
+<table width="99%" border="1" cellpadding="0" cellspacing="0" bordercolor="#CCCCCC">
+  <tr> 
+    <td width="53%"><font size="2" face="Arial, Helvetica, sans-serif">Title name</font></td>
+    <td width="33%" valign="top"><font size="2" face="Arial, Helvetica, sans-serif">assigns 
+      to:</font></td>
+  </tr>
+  <tr> 
+    <td valign="top">module:%modulename%;</td>
+    <td valign="top">%modulename% this template will be shown on any page using 
+      this module.</td>
+  </tr>
+  <tr> 
+    <td valign="top">module:%modulename%{category:%category%};</td>
+    <td valign="top">the specified %category% in %modulename%, it will be shown 
+      on any page in that module using that category.</td>
+  </tr>
+  <tr> 
+    <td valign="top">module:%modulename%{category:%category%}{%style%};</td>
+    <td valign="top">the specified %style% in %category% &amp; %modulename%, it 
+      will be shown on any page in that module using that category.</td>
+  </tr>
+  <tr> 
+    <td valign="top">module:%modulename%{%style%};</td>
+    <td valign="top">the specified %style% in %modulename%, it will be shown on 
+      any page in that module regardless of category.</td>
+  </tr>
+</table>
+<p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">If 
+  you still have problems or do not understand the naming system please email 
+  me at michealo@ozemail.com.au or try checking out our forums.</font></p>
+</body>
+</html>

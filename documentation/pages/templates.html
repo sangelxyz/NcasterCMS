@@ -1,0 +1,170 @@
+<html>
+<head>
+<title>templates</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"> 
+  <p><font size="5"><img src="../images/ncaster.jpg" border="0"></font></p>
+  <p align="left"><font size="5"><font size="5"><font size="5"><font size="5"><font size="5"><font size="5"><font size="5"><font size="2"><font size="5"><font size="2"><font size="5"><font size="2"><font size="5"><font size="2"><font size="5"><font size="2"><font size="5"><font size="2"><font size="5"><font size="2"><font size="5"><font size="2"><font face="Verdana, Arial, Helvetica, sans-serif"> 
+    </font></font></font><font face="Verdana, Arial, Helvetica, sans-serif"> </font></font></font><font face="Verdana, Arial, Helvetica, sans-serif"></font></font></font><font face="Verdana, Arial, Helvetica, sans-serif"> 
+    </font></font><font size="5"><font size="5"><font size="5"><font size="5"><font size="5"><font size="5"></font></font></font></font></font></font></font><font face="Verdana, Arial, Helvetica, sans-serif"></font></font></font><font face="Verdana, Arial, Helvetica, sans-serif"> 
+    </font></font><font size="5"><font size="5"><font size="5"><font size="5"><font size="5"><font size="5"></font></font></font></font></font></font></font><font face="Verdana, Arial, Helvetica, sans-serif"></font></font></font></font></font><font size="3" face="Verdana, Arial, Helvetica, sans-serif"><b><font size="5" color="#33CCCC">Templates 
+    <font size="2"> Basic</font><font size="5"><font size="5"><font size="5"><font size="5"><font size="5"><font size="5"><font size="3" face="Verdana, Arial, Helvetica, sans-serif"><b><font size="5" color="#33CCCC"><font size="2"> 
+    to Advanced</font></font></b></font></font></font></font></font></font></font><font size="2"> 
+    Template Creation.</font> </font></b></font></font></font></font></font></font></font></p>
+</div>
+<p><font size="5"><font size="5"><font size="5"><font size="5"><font size="5"><font size="5"><font size="5"><font size="2"><font size="5"><font size="2"><font face="Verdana, Arial, Helvetica, sans-serif">In 
+  this section we will cover.<br>
+  * Creation of a basic template<br>
+  </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif">* Apply advanced 
+  features and methods to our basic template.</font><font face="Verdana, Arial, Helvetica, sans-serif"><br>
+  </font></font></font></font></font></font></font></font></font></font></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+  <font color="#33CCCC" size="5">Basic Template Creation.</font><font size="5"><font color="#33CCCC"> 
+  </font></font><b><font color="#33CCCC"><br>
+  </font></b></font></p>
+<p><font size="2" face="Verdana, Arial, Helvetica, sans-serif" color="#33CCCC"><b>Template 
+  types:</b></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+  - Full page: a full page template is the actualy page it's self.<br>
+  - News Style: a news style is a template that gets repeated over and over again 
+  to fourm your news page, this is then wraped in your full page template to give 
+  you your news page.<br>
+  </font></p>
+<p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">To create a new 
+  full page template in ncaster, click settings/options &gt; Add Full page Layout<br>
+  </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif">To create 
+  a new full page template in ncaster, click settings/options &gt; Add News Display 
+  Template</font></p>
+<p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> now you are greated 
+  with the editor, the first thing you should do is give your template a name 
+  eg. My_full_page_template <br>
+  and then a template.</font></p>
+<p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>A basic Full 
+  page template whould look something like this.</b><br>
+  &lt;html&gt;<br>
+  &lt;head&gt;&lt;/head&gt;<br>
+  &lt;title&gt;My page: &lt;!$category$&gt;: &lt;!$subject$&gt;&lt;/title&gt;<br>
+  &lt;body&gt;<br>
+  &lt;!$news$&gt;<br>
+  &lt;/body&gt;<br>
+  &lt;/html&gt; </font></p>
+<p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Note the comment 
+  tags &lt;!$category$&gt;, &lt;!$subject$&gt; &amp; &lt;!$news$&gt; these among 
+  many others are parsed by ncaster before viewing, &lt;!$news$&gt; should be 
+  present in most if not all your templates with out it modules can not display 
+  there out put and you cannot view your news articles.</font></p>
+<p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>A basic News 
+  Style template whould look something like this.</b><br>
+  &lt;p&gt;&lt;!$title$&gt;&lt;/b&gt;&lt;br&gt;<br>
+  &lt;!$news_desc$&gt;&lt;br&gt;<br>
+  &lt;a href=&quot;view.php&lt;!$url$&gt;&quot;&gt;Full news&lt;/a&gt; by &lt;a 
+  href=&quot;mailto:&lt;!$email$&gt;&quot;&gt;&lt;!$username$&gt;&lt;/a&gt;&lt;/p&gt;<br>
+  </font></p>
+<p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">After you have 
+  sucessfully created your templates you can assign each to categorys to be loaded 
+  you can do this by going to settings/options &gt; template management, settings/options 
+  &gt; Assign a template.</font></p>
+<p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#33CCCC" size="5">Template 
+  Naming system.</font><font size="5"><font color="#33CCCC"> <a name="naming"></a></font></font><b><font color="#33CCCC"><br>
+  Syntex</font></b></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" color="#33CCCC"><b>:</b></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+  module:modulename{category:categoryid}{style:name of style};</font></p>
+<p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><b><font color="#33CCCC">examples</font></b></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" color="#33CCCC"><b>:</b></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+  Universal assign:<br>
+  module:azlist;<br>
+  Category Assign:<br>
+  module:azlist{category:7};</font></p>
+<p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><b><font color="#33CCCC">Over 
+  view </font></b></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif" color="#33CCCC"><b>:</b></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+  Ncaster features a template naming system that allows you to assign templates 
+  directly to modules, this naming system allows ncaster to be extreamly custimisable, 
+  each module can have </font></p>
+<p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">1 Universal template 
+  &amp; <br>
+  1 Category template</font></p>
+<p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Each category in 
+  ncaster can also be given a Super Global template these templates are used for 
+  everything that uses that category however if you apply a universal template 
+  to a module it will be used for all categorys, if you apply a module-category 
+  template to that same module the category template will now be the display template.</font></p>
+<p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#33CCCC" size="5">Advanced 
+  Template Creation. <font size="2">When the basic stuff just ain't enought.</font></font><font size="5"><font color="#33CCCC"> 
+  </font></font><b><font color="#33CCCC"><br>
+  </font></b><font color="#33CCCC"><font color="#000000">This is where the real 
+  fun starts the ncaster display engine is a multilayer rendering system that 
+  splits you template up when processed in to variables and multilayered html, 
+  variables and functions (entity) are rendered first this allows you to modifi 
+  tags values many times before the final tag parser is executed.</font></font></font></p>
+<p><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif">Lets 
+  take our basic news style and take and take a long look how we could improve 
+  it.</font><br>
+  <font size="2" face="Verdana, Arial, Helvetica, sans-serif">&lt;p&gt;&lt;!$title$&gt;&lt;/b&gt;&lt;br&gt;<br>
+  &lt;!$news_desc$&gt;&lt;br&gt;<br>
+  &lt;a href=&quot;view.php&lt;!$url$&gt;&quot;&gt;Full news&lt;/a&gt; by &lt;a 
+  href=&quot;mailto:&lt;!$email$&gt;&quot;&gt;&lt;!$username$&gt;&lt;/a&gt;&lt;/p&gt;</font> 
+</p>
+<p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">What i came up 
+  with.<br>
+  - If the title is to long cut it down.<br>
+  - if there is no news don't link.</font></p>
+<p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">lets apply these 
+  idears to our template using the new entity 2 scripting language.<br>
+  &lt;p&gt;{$var|left|&quot;$title;&quot;,&quot;16&quot;}{$var|lengthstr|&quot;$news_desc;&quot;}{$var|morethen|&quot;$var;&quot;,&quot;16&quot;,&quot;..&quot;}</font><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&lt;/b&gt;&lt;br&gt;<br>
+  &lt;!$news_desc$&gt;&lt;br&gt;<br>
+  {$var|lengthstr|&quot;$news;&quot;}{$var|morethen|&quot;$var;&quot;,&quot;0&quot;,&quot;&lt;a 
+  href=&quot;view.php&lt;!$url$&gt;&quot;&gt;Full news&lt;/a&gt;&quot;}</font><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+  by &lt;a href=&quot;mailto:&lt;!$email$&gt;&quot;&gt;&lt;!$username$&gt;&lt;/a&gt;&lt;/p&gt;</font></p>
+<p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">this will cut the 
+  title string down to 16 bytes long and add the .. at the end if it's to big 
+  to fit.<br>
+  the link will only be printed if &lt;!$news$&gt; field is more then 0 bytes 
+  long.</font></p>
+<p><font size="2" face="Verdana, Arial, Helvetica, sans-serif" color="#33CCCC"><b><a name=nav>Nav 
+  includes (Template in template system): [nav]template name[/nav]</a></b></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+  Nav includes works very similer to the php function include however the diffrence 
+  is that nav gets it's information from your database and not a file. The advantage 
+  of nav includes are that you can have one template that calls other templates 
+  to create a page e.g.<br>
+  </font></p>
+<p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Main index template.</font></p>
+<p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">[nav]header[/nav]<br>
+  &lt;!$news$&gt;<br>
+  [nav]footer[/nav] <br>
+  </font></p>
+<p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">header template.<br>
+  &lt;html&gt;<br>
+  &lt;head&gt;&lt;/head&gt;<br>
+  &lt;title&gt;My page: &lt;!$category$&gt;: &lt;!$subject$&gt;&lt;/title&gt;<br>
+  &lt;body&gt;</font></p>
+<p><font size="2" face="Verdana, Arial, Helvetica, sans-serif">footer template<br>
+  &lt;/body&gt;<br>
+  &lt;/html&gt; </font></p>
+<p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#33CCCC"><b>Include</b></font> 
+  <br>
+  Include Syntax: [include]absolutepath[/include]<br>
+  Include is used to include external pages in to the ncaster display script you 
+  can include any file on the server except (config.php) by using the above syntax.</font></p>
+<p><font size="2" face="Verdana, Arial, Helvetica, sans-serif" color="#33CCCC"><b>Entity: 
+  ncasters Native Template Scripting language</b></font> <font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+  please see <a href="entity2.html">pages/entity2.html</a></font></p>
+<p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><b><font color="#33CCCC"> 
+  </font></b><font color="#33CCCC"><b>Require</b></font> <br>
+  Require Syntax: [require]absolutepath[/require]<br>
+  In ncaster it is now possible to require in to your templates, this makes it 
+  possible to require polls and other programs directly in to your templates.<br>
+  Note: Require only works in full page templates, Require is <u>disabled</u> 
+  by default to enable it open up view.php and edit the variable $requirefunction.<br>
+  </font></p>
+<div align="left"> 
+  <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#33CCCC"><b>Otemp</b></font> 
+    <br>
+    <font color="#000000">Otemp is a feature of ncaster that allows you to overwrite 
+    an assigned template using a url you can change the template by doing something 
+    like this http://yourwebpage/view.php?otemp=templatename you can also use 
+    tid= which is similer to otemp however you call the id and not the name of 
+    the template e.g </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#000000">http://yourwebpage/view.php?tid=1 
+    .</font></font> </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#33CCCC"><b> 
+    </b></font></font></p>
+  </div>
+</body>
+</html>

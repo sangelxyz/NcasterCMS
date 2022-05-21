@@ -1,0 +1,22 @@
+// approve table
+CREATE TABLE ncaster_notapproved (
+  id bigint(20) NOT NULL auto_increment,
+  uniq bigint(20) NOT NULL default '0',
+  title varchar(255) default NULL,
+  description text,
+  author varchar(32) default NULL,
+  submitted int(10) default NULL,
+  article text,
+  catogory varchar(100) default NULL,
+  arctime varchar(100) default NULL,
+  page bigint(20) default NULL,
+  hits bigint(100) NOT NULL default '0',
+  sticky tinyint(1) default NULL,
+  category_id int(10) NOT NULL default '0',
+  author_id int(10) NOT NULL default '0',
+  PRIMARY KEY  (id),
+  KEY author_id (author_id),
+  KEY page (page),
+  KEY category_id (category_id),
+  KEY uniq (uniq)
+) TYPE=MyISAM;

@@ -1,0 +1,155 @@
+<html>
+<head>
+<title>ncaster: Php scripting.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"> 
+  <p><font size="5"><img src="../images/ncaster.jpg"></font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&middot; 
+    <strong>N-Code</strong> (NC-Code)<br>
+    Over View: N-Code or NC-Code is a variations of the popular ubbcode and vbbcode 
+    system, it works as a safe way of showing html with out actually typing html.</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>Tip:</strong> 
+    As of ncaster 1.7.2 you now have the option to set properties for specific 
+    tags, at the moment only [img] and [imageid] currently support this but others 
+    will at a later date.</font></p>
+  <p align="left"><font face="Verdana, Arial, Helvetica, sans-serif">Note: Make 
+    sure nc-code is enabled, otherwise the tags will not be processed.</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">- 
+    Syntex run down.</font><font face="Verdana, Arial, Helvetica, sans-serif"><br>
+    <font size="2">- Tag list.</font></font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#33CCCC" size="5">Syntex 
+    .</font></font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">1. 
+    Basic:<br>
+    [tag]text here[/tag]</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">2. 
+    2 Phase tag:<br>
+    [tag=text here]text here[/tag]</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">3. 
+    Properties tag:<br>
+    [tag arg1=ya arg2=ya2][/tag]</font></p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">1. 
+    Basic is the most used type of tag.<br>
+    2. Two phase tag is used mainly for links this allows you to give a description 
+    of the link as well as the actual link<br>
+    3. With the last tag you can define properties for the tag, such as img height, 
+    width, border or even set a link.</font></p>
+  <p align="left">&nbsp;</p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><font color="#33CCCC" size="5">T</font><font color="#33CCCC" size="5">ags.</font><font size="5"><font color="#33CCCC"> 
+    </font></font></font></p>
+  <table width="100%" border="1" cellpadding="0" cellspacing="0" bordercolor="#CCCCCC">
+    <tr valign="top" bgcolor="#33CCCC"> 
+      <td width="15%"><strong>Tags: [tag][/tag]</strong></td>
+      <td width="35%"><strong>What it does.</strong></td>
+      <td width="50%"><strong>Useage:</strong></td>
+    </tr>
+    <tr valign="top"> 
+      <td>img</td>
+      <td>Displays the image from the location given.</td>
+      <td>[img]url to image[/img]<br>
+        [img border=2 height=10 width=7 class=image link=link]url to image[/img]<br>
+        * This tag supports properties, this allows you to change the height, 
+        width ect, each property is optional.<br> </td>
+    </tr>
+    <tr valign="top"> 
+      <td>imageid</td>
+      <td>Displays a image from the id given</td>
+      <td>[imageid]id of image[/imageid]<br>
+        [imageid border=2 height=10 width=7 class=image link=link]id of image[/imageid]<br>
+        * This tag supports properties, this allows you to change the height, 
+        width ect, each property is optional.</td>
+    </tr>
+    <tr valign="top"> 
+      <td>u</td>
+      <td>Under line</td>
+      <td>[u]text[/u]</td>
+    </tr>
+    <tr valign="top"> 
+      <td>i</td>
+      <td>Italic</td>
+      <td>[i]text[/i]</td>
+    </tr>
+    <tr valign="top"> 
+      <td>b</td>
+      <td>Bold</td>
+      <td>[b]text[/b]</td>
+    </tr>
+    <tr valign="top"> 
+      <td>quote</td>
+      <td>Quote</td>
+      <td>[quote]text[/quote]</td>
+    </tr>
+    <tr valign="top"> 
+      <td>li</td>
+      <td>List</td>
+      <td>[li][ol]text[/ol][/li] <br>
+        * [li] is only to start a list, this must be followed with the ol or ul 
+        tags to create ordered or unordered lists.</td>
+    </tr>
+    <tr valign="top"> 
+      <td>ol</td>
+      <td>Ordered list</td>
+      <td>[li][ol]text[/ol][/li] <br>
+        * [li] is only to start a list, this must be followed with the ol or ul 
+        tags to create ordered or unordered lists.</td>
+    </tr>
+    <tr valign="top">
+      <td>ul</td>
+      <td>Un-orded list</td>
+      <td>[li][ul]text[/ul][/li] <br>
+        * [li] is only to start a list, this must be followed with the ol or ul 
+        tags to create ordered or unordered lists.</td>
+    </tr>
+    <tr valign="top"> 
+      <td>size</td>
+      <td>Font size</td>
+      <td>[size=size]text[/size]</td>
+    </tr>
+    <tr valign="top"> 
+      <td>color</td>
+      <td>Font Color</td>
+      <td>[color=color]text[/color]</td>
+    </tr>
+    <tr valign="top"> 
+      <td>font</td>
+      <td>Font</td>
+      <td>[font=font]text[/font]</td>
+    </tr>
+    <tr valign="top"> 
+      <td>table</td>
+      <td>Start a table</td>
+      <td>[table]text[/table]</td>
+    </tr>
+    <tr valign="top"> 
+      <td>td</td>
+      <td>Start a column in a table</td>
+      <td>[table][td]text[/td][/table]</td>
+    </tr>
+    <tr valign="top"> 
+      <td>tr</td>
+      <td>Start a row</td>
+      <td>[table][td][tr]text[/tr][/td][/table]</td>
+    </tr>
+    <tr valign="top"> 
+      <td>url</td>
+      <td>Url Link</td>
+      <td>[url]http://mylist.com[/url]<br>
+        [url=http://mylist.com]my web page[/url] </td>
+    </tr>
+    <tr valign="top"> 
+      <td>email</td>
+      <td>link to email address</td>
+      <td>[email]michealo@ozemail.com.au[/email]</td>
+    </tr>
+  </table>
+  <p align="left">&nbsp;</p>
+  <p align="left"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Most 
+    tags in the next release will have properties from which you can change.<br>
+    </font></p>
+  <p align="left">&nbsp;</p>
+  </div>
+</body>
+</html>

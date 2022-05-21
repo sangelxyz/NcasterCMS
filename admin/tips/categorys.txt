@@ -1,0 +1,2 @@
+Any category can be changed in to a hub, hubs allow you to merge two articles together.
+If you relate a category to a hub a new menu will appear in both Post and edit displays, this new box will allow you to relate an article to the hub articles this will merge all custom fields with the article you type.

@@ -1,0 +1,27 @@
+.tablebg {
+	background-color: FFFFFF;
+	border: 1px solid #999999;
+}
+.container1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	background-color: #F6F6F6;
+	font-size: 12px;
+
+
+}
+
+.contentb { 
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: lighter;
+	background-color: #EAEAEA 
+	
+}
+
+.containerb {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: lighter;
+	background-color: #E6F6F6;
+}
